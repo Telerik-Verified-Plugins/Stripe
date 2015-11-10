@@ -28,7 +28,9 @@
     <js-module name="transfers" src="www/transfers.js">
         <clobbers target="stripe.transfers" />
     </js-module>
-
+    <js-module name="coupons" src="www/coupons.js">
+        <clobbers target="stripe.coupons" />
+    </js-module>
     <platform name="ios">
   		<config-file parent="/*" target="config.xml">
   			<feature name="Stripe">
