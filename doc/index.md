@@ -1,6 +1,6 @@
 # com.telerik.stripe
 
-Stirpe is a payment infrastructure for the internet. Stripe Cordova SDK is built around the well organized REST API. it exposes a global `window.stripe` object that defines various operation to initialze and transfer payments.
+Stripe is a payment infrastructure for the internet. Stripe Cordova SDK is built around the well organized REST API. it exposes a global `window.stripe` object that defines various operation to initialze and transfer payments.
 
 Although the object is in the global scope, it is not available until after the `deviceready` event.
 
