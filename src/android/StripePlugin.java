@@ -45,7 +45,7 @@ public class StripePlugin extends CordovaPlugin {
 
   private void processCommand(final CallbackContext callbackContext, final JSONArray args) throws JSONException, UnsupportedEncodingException {
 
-    int appResId = cordova.getActivity().getResources().getIdentifier("api_key", "string", cordova.getActivity().getPackageName());
+    int appResId = cordova.getActivity().getResources().getIdentifier("stripe_api_key", "string", cordova.getActivity().getPackageName());
     String apiKey = cordova.getActivity().getString(appResId);
 
     final HttpClient httpclient = new DefaultHttpClient();

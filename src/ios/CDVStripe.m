@@ -55,7 +55,7 @@
 
     [request setHTTPMethod:method];
 
-    NSString *apiKey = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"ApiKey"];
+    NSString *apiKey = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"StripeApiKey"];
 
     NSString *authStr = [NSString stringWithFormat:@"%@:", apiKey];
     NSData *authData = [authStr dataUsingEncoding:NSUTF8StringEncoding];

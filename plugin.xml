@@ -41,7 +41,7 @@
   		<header-file src="src/ios/CDVStripe.h" />
   		<source-file src="src/ios/CDVStripe.m" />
 
-      <config-file target="*-Info.plist" parent="ApiKey">
+      <config-file target="*-Info.plist" parent="StripeApiKey">
           <string>$API_KEY</string>
       </config-file>
  
@@ -49,10 +49,8 @@
 
     <platform name="android">
 
-		<source-file src="src/android/res/values/stripe.xml" target-dir="res/values" />
-
-      <config-file target="res/values/stripe.xml" parent="/*">
-          <string name="api_key">$API_KEY</string>
+      <config-file target="res/values/strings.xml" parent="/*">
+          <string name="stripe_api_key">$API_KEY</string>
       </config-file>
 
 		  <config-file target="res/xml/config.xml" parent="/*">
