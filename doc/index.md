@@ -8,7 +8,18 @@ Although the object is in the global scope, it is not available until after the 
     function onDeviceReady() {
         console.log(window.stripe);
     }
+    
+## Security Warning
 
+This plugin requires that the Stripe secret key is embedded into the application. As the name suggests, you should **never share** the secret key as it allows full access to the Stripe API. Embedding the secret key into the application means that anyone can discover the key and use it to access the API. **This could cause sensitive data to leak (all previous charges are visible) or even financial loss (refunds can be initiated).**
+
+It is highly unlikely that you want to embed your Stripe secret key in a Cordova application, and hence highly unlikely you want to use this plugin.
+
+https://support.stripe.com/questions/difference-between-secret-key-and-publishable-key
+
+The correct method to accept payments from mobile devices uses the publishable key only. Whilst it is possible to submit payments using the secret key, anyone who obtains your secret key can view all prior charges, issue refunds, and initiate transfers.
+
+Please carefully consider if this is what is intended before use. 
 
 ## Installation
 
