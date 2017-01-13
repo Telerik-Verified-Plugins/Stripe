@@ -26,6 +26,16 @@ Please carefully consider if this is what is intended before use.
 You need a Stripe API key for using this plugin, which you can obtain from [Stripe](https://stripe.com/docs). Once you have your API key, you can install the plugin in the following way:
 
     cordova plugin add url —variable API_KEY="YOUR_API_KEY"
+    
+## Security
+
+This plugin is not intended to be used in applications for general client use, as it requires that the Stripe secret key is embedded. As the name suggests, you should never share the secret key as it allows full access to the Stripe API.
+
+https://support.stripe.com/questions/difference-between-secret-key-and-publishable-key
+
+The correct method to accept payments from mobile devices uses the publishable key only. Whilst it is possible to submit payments using the secret key, anyone who obtains your secret key can view all prior charges, issue refunds, and initiate transfers.
+
+Please carefully consider if this is what is intended before use.
 
 ## Methods
 
